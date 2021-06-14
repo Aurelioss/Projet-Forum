@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" sizes="16x16" href="../style/icon/ynov.png">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <link rel="stylesheet" type="text/css" href="../style/login.css" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Projet Forum - signup</title>
+    </head>
+    <body>
+        <noscript> This website need Javascript </noscript>
+
+        <div id="banner1">
+			<p>CONNEXION</p>
+		</div>
+        <div id="menu">
+			<ul>
+				<li><a href="index.html">ACCUEIL</a></li>
+				<li><a href="/sign_up">INSCRIPTION</a></li>
+				<li><a href="chat.html">CHAT</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+        <div id="contenuprincipal">
+            <form method="POST">
+                <h1>Se connecter</h1>
+                {{if .}} echec {{end}}
+                <div class="inputs">
+                    <p> Username :</p>
+				    <input type="text" placeholder="username" name="name"/> <br>
+                    <p> Password :</p>
+			    <input type="password" placeholder="password" name="password"> <br>
+            </div>
+            <button type="submit"> Valider </button>    
+            </form>
+            <p class="inscription">Je n'ai pas de compte. Je m'en <a href="sign_up">crée un.</a></p>
+        </div>
+  
+</body>
+
+</html>

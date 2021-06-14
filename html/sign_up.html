@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="16x16" href="../style/icon/ynov.png">
+    <link rel="stylesheet" type="text/css" href="../style/signup.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Projet Forum - signup</title>
+</head>
+
+<body>
+    <noscript> This website need Javascript </noscript>
+
+    <div id="banner1">
+        <p>INSCRIPTION</p>
+      </div>
+      <div id="menu">
+        <ul>
+          <li><a href="index.html">ACCUEIL</a></li>
+          <li><a href="/load_profil">CONNEXION</a></li>
+          <li><a href="chat.html">CHAT</a></li>
+          <li><a href="/contact">CONTACT</a></li>
+        </ul>
+      </div>
+
+    {{if .Valider}}
+    <h1> réussi </h1>
+    <form method="POST" action="/">
+        <button type="submit">normal</button>
+    </form>
+    {{else}}
+
+    <div class="signup-box">
+        <h1>S'inscrire</h1>
+        <h4>C'est gratuit et ça ne prend qu'une minute !</h4>
+        <form method="POST">
+            <p> Username: </p>
+            {{if .Bandeau_name}}<p class="incorrect"> <b>incorrect</b></p>{{end}}
+            <input type="text" name="name" placeholder="ex: TheBoss65" value={{.Name}}> <br>
+
+            <p> Mail: </p>
+            {{if .Bandeau_mail}}<p class="incorrect"><b>incorrect</b></p>{{end}}
+            <input type="text" name="mail" placeholder="exemple@mail.com" value={{.Mail}}> <br>
+
+            <p> Password: </p>
+            {{if .Bandeau_password}}<p class="incorrect"><b>incorrect</b></p>{{end}}
+            <input type="text" name="password" placeholder="Enter here your password" value={{.Password}}> <br>
+
+            <p> Confirm password: </p>
+            <input type="password" name="password2" placeholder="Confirm here your password"> <br>
+
+            <button type="submit"> Inscription </button>
+        </form>
+        <p>
+            En cliquant sur le bouton Inscription, vous acceptez nos <br />
+            <a href="#">Termes et Conditions </a> et <a href="#">Politique de Confidentialité</a>
+        </p>
+    </div>
+    <p class="para-2">
+        Vous avez déjà un compte ? <a href="/load_profil">Connectez-vous ici</a>
+    </p>
+        {{end}}
+        <form method="POST" action="/">
+            <button type="submit">normal</button>
+        </form>
+</body>
+</html>

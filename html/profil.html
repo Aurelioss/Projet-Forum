@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/png" sizes="16x16" href="../style/icon/ynov.png">
+        <link rel="stylesheet" type="text/css" href="../style/profil.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profil</title>
+    </head>
+
+    <html>
+        <head>
+            <link rel="icon" type="image/png" sizes="16x16" href="img/ynov.png">
+            <title>ACCUEIL</title>
+            <link rel="stylesheet" type="text/css" href="style/style.css" />
+        </head>
+        <body>
+            <div id="site">
+                <div id="banner1">
+                    <p>PROFIL</p>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="index.html">ACCUEIL</a></li>
+                        <li><a href="chat.html">CHAT</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="/deconnexion">DECONNEXION</a></li>
+                    </ul>
+                </div>
+                <div id="banner2">
+                </div>
+    
+            <div id="contenuprincipal">
+                <div id="contenuprincipal">
+                    <form method="POST" action="/profil">
+                        <h1>Votre profil</h1>
+                        <div>
+                            <p class="info">Pseudo : {{.Name}}</p>
+            
+                            <p class="info">Email : {{.Mail}}</p>
+                        
+                            <p class="info">Mot de passe : {{.Password}}</p>
+                        </div>
+                    </form>    
+                        <form method="POST">
+                            <p> Modifiez votre mot de passe </p>
+                            <input type="text" name="password" placeholder="New password"> <br>
+                            <button type="submit"> Change it </button>
+                        </form>
+            
+                        <h1>Vos Publications :</h1>
+                </div>
+            </div>
+        </body>
+    </html>
+
+</html>
